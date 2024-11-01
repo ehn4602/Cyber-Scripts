@@ -1,0 +1,3 @@
+./windapsearch -d "192.168.56.10" -u "robert.baratheon@sevenkingdoms.local" -p "iamthekingoftheworld" -m "custom" --filter "(admincount=1)" | grep -a "dn"
+./windapsearch -d "192.168.56.10" -u "robert.baratheon@sevenkingdoms.local" -p "iamthekingoftheworld" -m "custom" --filter "(objectClass=*)" ServicePrincipalName | grep -a servicePrincipalName
+./windapsearch -d "192.168.56.10" -u "robert.baratheon@sevenkingdoms.local" -p "iamthekingoftheworld" -m "custom" --filter "(&(objectClass=*)(memberof:1.2.840.113556.1.4.1941:=CN=Domain Admins,CN=users,DC=sevenkingdoms,DC=local))"
